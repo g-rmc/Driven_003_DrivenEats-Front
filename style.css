@@ -113,13 +113,17 @@ body{
     bottom: 12px;
 }
 
+.produtos div:hover {
+    cursor: pointer;
+}
+
 /* 2.1 - INTERAÇÃO DO USUÁRIO */
 
-.produtos div.borda {
+.produtos div.selecionado {
     border-color: #32B72F;
 }
 
-.produtos div.borda ion-icon{
+.produtos div.selecionado ion-icon{
     color: #32B72F;
 }
 

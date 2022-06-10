@@ -100,8 +100,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 18px 14px 13px 14px;
+    padding: 14px 8px 9px 10px;
     position: relative;
+    border: solid 4px #ffffff;
 }
 
 .produtos ion-icon{
@@ -114,11 +115,11 @@ body{
 
 /* 2.1 - INTERAÇÃO DO USUÁRIO */
 
-.borda {
-    border: solid 4px #32B72F;
+.produtos div.borda {
+    border-color: #32B72F;
 }
 
-.borda ion-icon{
+.produtos div.borda ion-icon{
     color: #32B72F;
 }
 

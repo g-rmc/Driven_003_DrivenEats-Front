@@ -101,6 +101,25 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 18px 14px 13px 14px;
+    position: relative;
+}
+
+.produtos ion-icon{
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0);
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+}
+
+/* 2.1 - INTERAÇÃO DO USUÁRIO */
+
+.borda {
+    border: solid 4px #32B72F;
+}
+
+.borda ion-icon{
+    color: #32B72F;
 }
 
 /* 3 - BASE */

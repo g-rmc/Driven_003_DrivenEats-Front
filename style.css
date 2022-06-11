@@ -160,6 +160,10 @@ body{
     background-color: #32B72F;
 }
 
+.pedido-liberado:hover {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }

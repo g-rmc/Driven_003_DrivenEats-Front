@@ -1,10 +1,13 @@
 // Definicao dos botoes de itens
 
-let prato;
-let bebida;
-let sobremesa;
+let PratoNome;
+let PratoPreco;
+let BebidaNome;
+let BebidaPreco;
+let SobremesaNome;
+let SobremesaPreco;
 
-function SelecionarPrato(elemento) {
+function SelecionarPrato(elemento, preco) {
     let SelAnterior = document.querySelector(".prato .selecionado");
 
     if (SelAnterior !== null) {
@@ -13,12 +16,13 @@ function SelecionarPrato(elemento) {
 
     elemento.classList.add("selecionado");
 
-    prato = 1;
+    PratoNome = document.querySelector(".prato .selecionado h2").innerHTML;
+    PratoPreco = preco;
 
     LiberarPedido();
 }
 
-function SelecionarBebida(elemento) {
+function SelecionarBebida(elemento, preco) {
     let SelAnterior = document.querySelector(".bebida .selecionado");
 
     if (SelAnterior !== null) {
@@ -27,12 +31,13 @@ function SelecionarBebida(elemento) {
 
     elemento.classList.add("selecionado");
 
-    bebida = 1;
+    BebidaNome = document.querySelector(".bebida .selecionado h2").innerHTML;
+    BebidaPreco = preco;
 
     LiberarPedido();
 }
 
-function SelecionarSobremesa(elemento) {
+function SelecionarSobremesa(elemento, preco) {
     
     let SelAnterior = document.querySelector(".sobremesa .selecionado");
 
@@ -42,7 +47,8 @@ function SelecionarSobremesa(elemento) {
 
     elemento.classList.add("selecionado");
 
-    sobremesa = 1;
+    SobremesaNome = document.querySelector(".sobremesa .selecionado h2").innerHTML;
+    SobremesaPreco = preco;
 
     LiberarPedido();
 }
@@ -54,10 +60,29 @@ function LiberarPedido() {
     let BotaoBloqueado = document.querySelector(".pedido-bloqueado");
     let BotaoLiberado = document.querySelector(".pedido-liberado");
 
-    if (prato && bebida && sobremesa) {
+    if (PratoNome && BebidaNome && SobremesaNome) {
         BotaoBloqueado.classList.add("hide");
         BotaoLiberado.classList.remove("hide");
     }
-        
+}
+
+// Funcao de criar o link do whatsapp
+
+function FecharPedido() {
+
+    let total = PratoPreco + BebidaPreco + SobremesaPreco;
     
+    total = total.toFixed(2);
+
+    let mensagem = 
+    `Olá, gostaria de fazer o pedido:
+    - Prato: ${PratoNome}
+    - Bebida: ${BebidaNome}
+    - Sobremesa: ${SobremesaNome}
+    Total: R$ ${total}`;
+    
+    let link = encodeURIComponent(mensagem);
+
+    window.open("https://wa.me/?text=" + link)
+
 }

@@ -49,7 +49,7 @@ body{
 
 .conteudo{
     width: 100%;
-    padding: 120px 19px;
+    padding: 100px 20px 120px 20px;
 }
 
 .conteudo h1{
@@ -144,11 +144,22 @@ body{
 .base button {
     width: 364px;
     height: 61px;
-    background-color: #cbcbcb;
     border-width: 0;
     border-radius: 50px;
     color: #ffffff;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
+}
+
+.pedido-bloqueado{
+    background-color: #cbcbcb;
+}
+
+.pedido-liberado{
+    background-color: #32B72F;
+}
+
+.hide {
+    display: none;
 }

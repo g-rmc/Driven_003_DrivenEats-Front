@@ -84,7 +84,7 @@
 
             <div onclick="SelecionarBebida(this)">
               <img src="Imagens/7. Cerveja de Elefante.jpg">
-              <h2>Poção Azul</h2>
+              <h2>Cerveja de Elefante</h2>
               <p>Já viu elefantes cor-de-rosa?</p>
               <h3>R$ 9,99</h3>
               <ion-icon name="checkmark-circle"></ion-icon>
@@ -145,7 +145,8 @@
       <!-- 3 - BASE -->
 
       <div class="base">
-        <button>Selecione os 3 itens </br> para fechar o pedido</button>
+        <button class="pedido-bloqueado">Selecione os 3 itens </br> para fechar o pedido</button>
+        <button class="pedido-liberado hide" onclick="FecharPedido()">Fechar pedido</button>
       </div>
 
     </div>

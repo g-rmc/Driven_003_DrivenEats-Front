@@ -8,7 +8,7 @@ let SobremesaNome;
 let SobremesaPreco;
 
 function SelecionarPrato(elemento, preco) {
-    let SelAnterior = document.querySelector(".prato .selecionado");
+    const SelAnterior = document.querySelector(".prato .selecionado");
 
     if (SelAnterior !== null) {
         SelAnterior.classList.remove("selecionado");
@@ -23,7 +23,7 @@ function SelecionarPrato(elemento, preco) {
 }
 
 function SelecionarBebida(elemento, preco) {
-    let SelAnterior = document.querySelector(".bebida .selecionado");
+    const SelAnterior = document.querySelector(".bebida .selecionado");
 
     if (SelAnterior !== null) {
         SelAnterior.classList.remove("selecionado");
@@ -39,7 +39,7 @@ function SelecionarBebida(elemento, preco) {
 
 function SelecionarSobremesa(elemento, preco) {
     
-    let SelAnterior = document.querySelector(".sobremesa .selecionado");
+    const SelAnterior = document.querySelector(".sobremesa .selecionado");
 
     if (SelAnterior !== null) {
         SelAnterior.classList.remove("selecionado");
@@ -57,8 +57,8 @@ function SelecionarSobremesa(elemento, preco) {
 
 function LiberarPedido() {
 
-    let BotaoBloqueado = document.querySelector(".pedido-bloqueado");
-    let BotaoLiberado = document.querySelector(".pedido-liberado");
+    const BotaoBloqueado = document.querySelector(".pedido-bloqueado");
+    const BotaoLiberado = document.querySelector(".pedido-liberado");
 
     if (PratoNome && BebidaNome && SobremesaNome) {
         BotaoBloqueado.classList.add("hide");
@@ -70,16 +70,22 @@ function LiberarPedido() {
 
 function FecharPedido() {
 
+    const Nome = prompt("Digite aqui seu nome :D");
+    const Endereco = prompt("E aqui o seu endereço ;)");
+
     let total = PratoPreco + BebidaPreco + SobremesaPreco;
     
     total = total.toFixed(2);
 
-    let mensagem = 
+    const mensagem = 
     `Olá, gostaria de fazer o pedido:
     - Prato: ${PratoNome}
     - Bebida: ${BebidaNome}
     - Sobremesa: ${SobremesaNome}
-    Total: R$ ${total}`;
+    Total: R$ ${total}
+    
+    Nome: ${Nome}
+    Endereço: ${Endereco}`;
     
     let link = encodeURIComponent(mensagem);
 

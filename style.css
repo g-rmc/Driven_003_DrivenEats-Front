@@ -167,3 +167,30 @@ body{
 .hide {
     display: none;
 }
+
+/* BONUS - VALIDAR O PEDIDO */
+
+.validar{
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.85);
+    width: 100vw;
+    max-width: 600px;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.confirmacao{
+    width: 377px;
+    height: 353px;
+    background-color: #50d074;
+    border-radius: 9px;
+    position: fixed;
+    top: calc(50% - 377px/2);
+    left: calc(50% - 353px/2);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

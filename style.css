@@ -193,4 +193,43 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    color: #ffffff;
+}
+
+.confirmacao div {
+    width: 326px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirmacao div:nth-child(1), div:nth-child(6), div:nth-child(7) {
+    justify-content: center;
+}
+
+.confirmacao h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.confirmacao h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.confirmacao button {
+    border: 0;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    background-color: #ffffff;
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.confirmacao button:hover, h2:hover {
+    cursor: pointer;
 }

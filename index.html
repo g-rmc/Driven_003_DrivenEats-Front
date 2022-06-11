@@ -147,18 +147,36 @@
 
       <div class="base">
         <button class="pedido-bloqueado">Selecione os 3 itens </br> para fechar o pedido</button>
-        <button class="pedido-liberado hide" onclick="FecharPedido()">Fechar pedido</button>
+        <button class="pedido-liberado hide" onclick="Avancar()">Fechar pedido</button>
       </div>
       
-      <div class="validar">
+      <div class="validar hide">
         <div class="confirmacao">
-          <div>Confirme seu pedido</div>
-          <div>Prato</div>
-          <div>Bebida</div>
-          <div>Sobremesa</div>
-          <div>Total</div>
-          <div>Seguir</div>
-          <div>Voltar</div>
+          <div>
+            <h1>Confirme seu pedido</h1>
+          </div>
+          <div class="prato">
+            <p>Prato</p>
+            <p>Preço</p>
+          </div>
+          <div class="bebida">
+            <p>Bebida</p>
+            <p>Preço</p>
+          </div>
+          <div class="sobremesa">
+            <p>Sobremesa</p>
+            <p>Preço</p>
+          </div>
+          <div class="total">
+            <h1>TOTAL</h1>
+            <h1>Preço</h1>
+          </div>
+          <div>
+            <button onclick="FecharPedido()">Tudo certo, pode pedir!</button>
+          </div>
+          <div>
+            <h2 onclick="Voltar()">Cancelar</h2>
+          </div>
         </div>
       </div>
 

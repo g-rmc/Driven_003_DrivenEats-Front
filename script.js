@@ -6,6 +6,7 @@ let BebidaNome;
 let BebidaPreco;
 let SobremesaNome;
 let SobremesaPreco;
+let total;
 
 function SelecionarPrato(elemento, preco) {
     const SelAnterior = document.querySelector(".prato .selecionado");
@@ -73,9 +74,10 @@ function FecharPedido() {
     const Nome = prompt("Digite aqui seu nome :D");
     const Endereco = prompt("E aqui o seu endereço ;)");
 
-    let total = PratoPreco + BebidaPreco + SobremesaPreco;
-    
-    total = total.toFixed(2);
+    // Total passou a ser definido na função Avancar()
+
+    // total = PratoPreco + BebidaPreco + SobremesaPreco;
+    // total = total.toFixed(2);
 
     const mensagem = 
     `Olá, gostaria de fazer o pedido:
@@ -86,7 +88,7 @@ function FecharPedido() {
     
     Nome: ${Nome}
     Endereço: ${Endereco}`;
-    
+      
     let link = encodeURIComponent(mensagem);
 
     window.open("https://wa.me/?text=" + link)
@@ -99,7 +101,7 @@ function Avancar() {
     const Elemento = document.querySelector(".validar");
     Elemento.classList.remove("hide");
 
-    let total = PratoPreco + BebidaPreco + SobremesaPreco;
+    total = PratoPreco + BebidaPreco + SobremesaPreco;
     
     total = total.toFixed(2);
     PratoPreco = PratoPreco.toFixed(2);
